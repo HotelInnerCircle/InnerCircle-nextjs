@@ -14,10 +14,10 @@ export default function RoomCategories() {
   }, []);
 
   const categories = [
-    { id: 1, title: "STANDARD ROOM", count: "90+ Room", img: "https://www.hotelinnercircle.in/images/17.Inner%20Circle%20Standard%20Room.jpg" },
-    { id: 2, title: "DELUXE ROOM", count: "40+ Room", img: "https://www.hotelinnercircle.in/images/20.Inner%20Circle%20Deluxe.%20Room.jpg" },
-    { id: 3, title: "EXECUTIVE ROOM", count: "60+ Room", img: "https://www.hotelinnercircle.in/images/18.Inner%20Circle%20Executive%20Room.jpg" },
-    { id: 4, title: "DELUXE SUITE", count: "60+ Room", img: "https://www.hotelinnercircle.in/images/23.Iner%20Circle%20Deluxe%20%20suit.Room.JPG" },
+    { id: 1, title: "STANDARD ROOM", count: "90+ Room", img: "/Roomimages/StandardRoom/17.Inner Circle Standard Room.jpg" },
+    { id: 2, title: "DELUXE ROOM", count: "40+ Room", img: "/Roomimages/DeluxeRoom/21.Inner_Circle_Deluxe_Room.jpg" },
+    { id: 3, title: "EXECUTIVE ROOM", count: "60+ Room", img: "/Roomimages/ExecutiveRoom/18.Inner Circle Executive Room.jpg" },
+    { id: 4, title: "DELUXE SUITE", count: "60+ Room", img: "/Roomimages/DeluxeSuite/22.Inner Circle Delux Suit Room sit-out.png" },
   ];
 
   return (
