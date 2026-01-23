@@ -51,20 +51,20 @@ export default function RootLayout({ children }) {
     <html lang='en'>
       <head>
         {/* ✅ Google tag (gtag.js) */}
-        {/* <Script
+        <Script
           strategy='afterInteractive'
           src='https://www.googletagmanager.com/gtag/js?id=G-56FL1KH700'
-        /> */}
+        />
 
-        {/* <Script id='google-analytics' strategy='afterInteractive'>
+        <Script id='google-analytics' strategy='afterInteractive'>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-56FL1KH700');
           `}
-        </Script> */}
-        <Script id='gtm' strategy='afterInteractive'>
+        </Script>
+        {/* <Script id='gtm' strategy='afterInteractive'>
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -72,7 +72,7 @@ export default function RootLayout({ children }) {
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-NX3JSG2Q');
           `}
-        </Script>
+        </Script> */}
         {/* Google Fonts */}
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
