@@ -6,6 +6,7 @@ import { FaUsers, FaBed } from "react-icons/fa";
 import { MdBathroom } from "react-icons/md";
 import { TbRulerMeasure } from "react-icons/tb";
 import RoomCategories from "./RoomCategories";
+import Link from "next/link";
 
 export default function RoomsSection() {
   const [loading, setLoading] = useState(true);
@@ -19,7 +20,7 @@ export default function RoomsSection() {
     {
       id: 1,
       title: "STANDARD ROOM",
-      img: "https://ik.imagekit.io/b7gayfw2v/Gallery/Rooms/18.Inner%20Circle%20Executive%20Room.jpg?updatedAt=1765175398309",
+      img: "/Roomimages/StandardRoom/19.Inner Circle Exe Room.jpg",
       desc: "A step above standard, moderate and superior rooms, deluxe accomdations combine a desirable view with a number of luxurious amentities",
       price: 4499,
       size: "192 sq.ft",
@@ -30,7 +31,7 @@ export default function RoomsSection() {
     {
       id: 2,
       title: "DELUXE ROOM",
-      img: "https://ik.imagekit.io/b7gayfw2v/Gallery/Rooms/18.Inner%20Circle%20Executive%20Room.jpg?updatedAt=1765175398309",
+      img: "/Roomimages/DeluxeRoom/20.Inner_Circle_Deluxe.Room.jpg",
       desc: "2 bedrooms, living room, full kitchen, near kid's play zone.",
       price: 5699,
       size: "400 sq.ft",
@@ -41,7 +42,7 @@ export default function RoomsSection() {
     {
       id: 3,
       title: "EXECUTIVE ROOM",
-      img: "https://ik.imagekit.io/b7gayfw2v/Gallery/Rooms/18.Inner%20Circle%20Executive%20Room.jpg?updatedAt=1765175398309",
+      img: "/Roomimages/ExecutiveRoom/17.Inner Circle Standard Room.jpg",
       desc: "King bed, fireplace, private balcony overlooking the slopes.",
       price: 5099,
       size: "256 sq.ft",
@@ -52,10 +53,10 @@ export default function RoomsSection() {
     {
       id: 4,
       title: "DELUXE SUITE",
-      img: "https://ik.imagekit.io/b7gayfw2v/Gallery/Rooms/18.Inner%20Circle%20Executive%20Room.jpg?updatedAt=1765175398309",
+      img: "/Roomimages/DeluxeSuite/22.Inner Circle Delux Suit Room sit-out.JPG",
       desc: "Mountain view, queen bed, admiring breakfast.",
       price: 7399,
-     // size: "48 Feet's",
+      // size: "48 Feet's",
       bed: "2 Bed",
       guests: "2 Guests",
       bath: "2 Bathroom",
@@ -167,9 +168,9 @@ export default function RoomsSection() {
                   </div>
 
                   {/* Button */}
-                  <button className="mt-6 w-full py-2 border border-[#bfa374] text-[#8b6a2b] rounded-lg font-medium hover:bg-[#bfa374] hover:text-white transition">
+                  <Link href="https://bookings.resavenue.com/resBooking/rooms?regCode=TZVG1203&roomSearchId=51cc932e10db47048a8e45b7a7ff1ee5&adult_1=2"> <button className="mt-6 w-full py-2 border border-[#bfa374] text-[#8b6a2b] rounded-lg font-medium hover:bg-[#bfa374] hover:text-white transition">
                     View Details
-                  </button>
+                  </button></Link>
                 </div>
               </div>
             ))}

@@ -146,7 +146,7 @@ export default function TestimonialSection() {
                   {/* Profile */}
                   <div className="flex items-center gap-4 mb-4">
                     <Image
-                      src={t.img}
+                      src='/logos/hotel-testmonial.webp'
                       alt={t.name}
                       width={50}
                       height={50}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function EventHero() {
   const [loading, setLoading] = useState(true);
@@ -66,9 +67,9 @@ export default function EventHero() {
 
               {/* Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-8">
-                <button className="bg-[#F9811D] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full font-semibold text-lg shadow hover:bg-[#e27113] transition">
+               <Link href="/contact.php"><button className="bg-[#F9811D] text-white px-8 sm:px-10 py-3 sm:py-4 rounded-full font-semibold text-lg shadow hover:bg-[#e27113] transition">
                   Book Now
-                </button>
+                </button></Link> 
 
                 <button className="border border-[#F9811D] text-[#F9811D] px-8 sm:px-10 py-3 sm:py-4 rounded-full font-semibold text-lg hover:bg-[#fff7f2] transition">
                   Explore Services

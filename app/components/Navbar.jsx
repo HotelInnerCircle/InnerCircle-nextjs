@@ -41,12 +41,18 @@ export default function Navbar() {
         <div className="flex justify-between items-center px-10 py-3 text-white/90 
         backdrop-blur-md bg-black/20 border-b border-white/10">
           <div className="flex gap-5">
-            <FaInstagram /> <FaFacebookF /> <FaLinkedinIn />
+            <Link href="https://www.instagram.com/hotelinnercircle/"> <FaInstagram /></Link> <Link href="https://www.facebook.com/hotelinnercirclehyderabad"> <FaFacebookF /></Link> <Link href="https://www.linkedin.com/showcase/saboorks/?viewAsMember=true"><FaLinkedinIn /></Link>
+          </div>
+          <div className="flex items-center gap-2">
+            <FaPhone className="text-sm" />
+            <a
+              href="tel:+919848866614"
+              className="hover:underline"
+            >
+              +919848866614
+            </a>
           </div>
 
-          <div className="flex items-center gap-2">
-            <FaPhone /> +125055550199
-          </div>
         </div>
 
         {/* MAIN NAVBAR */}
@@ -105,7 +111,7 @@ export default function Navbar() {
 
           {/* Right Button */}
           <div className="hidden md:flex items-center gap-6">
-            <Link href='/rooms.php'><button className="border border-white px-6 py-2 rounded hover:bg-white hover:text-black duration-300">
+            <Link href='https://bookings.resavenue.com/resBooking/rooms?regCode=TZVG1203&roomSearchId=51cc932e10db47048a8e45b7a7ff1ee5&adult_1=2'><button className="border border-white px-6 py-2 rounded hover:bg-white hover:text-black duration-300">
               Reservation
             </button></Link>
           </div>

@@ -29,7 +29,7 @@ const page = () => {
 
       {/* Room Tabs Component */}
       <LuxuryRooms/>
-      <RoomTabs />
+      {/* <RoomTabs /> */}
     </div>
   );
 };

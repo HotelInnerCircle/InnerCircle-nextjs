@@ -86,8 +86,8 @@ export default function ContactPage() {
                     <FiPhone className="text-3xl text-[#C7A27C]" />
                   </div>
                   <h4 className="mt-4 font-semibold text-lg">Phone</h4>
-                  <a href="tel:+919876543210" className="text-gray-700 hover:text-[#C7A27C] transition mt-1">
-                    +91 98765 43210
+                  <a href="tel:+919848866614" className="text-gray-700 hover:text-[#C7A27C] transition mt-1">
+                    +91 9848866614
                   </a>
                 </div>
 
@@ -97,8 +97,8 @@ export default function ContactPage() {
                     <FiMail className="text-3xl text-[#C7A27C]" />
                   </div>
                   <h4 className="mt-4 font-semibold text-lg">Email</h4>
-                  <a href="mailto:info@luxuryhotel.com" className="text-gray-700 hover:text-[#C7A27C] transition mt-1">
-                    info@luxuryhotel.com
+                  <a href="mailto:info@hotelinnercircle.in" className="text-gray-700 hover:text-[#C7A27C] transition mt-1">
+                    info@hotelinnercircle.in
                   </a>
                 </div>
 
@@ -109,9 +109,7 @@ export default function ContactPage() {
                   </div>
                   <h4 className="mt-4 font-semibold text-lg">Location</h4>
                   <p className="text-gray-700 mt-1 leading-relaxed">
-                    Luxury Hotel,<br />
-                    City Center, Hyderabad,<br />
-                    Telangana, India – 500XXX
+                   Hotel Inner Circle, House No: 6-3-905,<br/> Raj Bhavan Rd, Matha Nagar,<br/> Somajiguda, Hyderabad, Telangana 500082
                   </p>
                 </div>
               </div>
@@ -142,7 +140,7 @@ export default function ContactPage() {
           ) : (
             <div className="rounded-3xl overflow-hidden shadow-xl">
               <Image
-                src="/Deluxe-King.avif"
+                src="/Roomimages/innercircle.webp"
                 alt="Warm hotel ambience"
                 width={900}
                 height={700}

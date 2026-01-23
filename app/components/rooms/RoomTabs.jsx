@@ -105,7 +105,7 @@ export default function RoomTabs() {
   return (
     <>
       <section className="w-full flex  flex-col lg:flex-row bg-white text-black">
-        
+
         {/* LEFT SIDE */}
         <div className="w-full lg:w-1/2 p-6 sm:p-10 lg:p-20">
 

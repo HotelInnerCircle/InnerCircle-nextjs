@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 import {
   FaInstagram,
   FaFacebookF,
@@ -6,6 +7,7 @@ import {
   FaArrowUp,
 } from "react-icons/fa";
 import { MdEmail, MdPhone, MdLocationOn } from "react-icons/md";
+import Image from "next/image"
 
 export default function Footer() {
   return (
@@ -16,9 +18,11 @@ export default function Footer() {
 
         {/* Column 1 */}
         <div>
+
           <h2 className="text-3xl font-serif font-bold flex items-center gap-2">
-            <span className="text-[#d4a75b] text-4xl">🏰</span> MetroLuxe
+            <Image src="/logos/HIC-white-logo.png" alt="MetroLuxe Logo" width={150} height={100} />
           </h2>
+
 
           <p className="text-gray-400 mt-4 leading-relaxed tracking-wide">
             A luxury hotel experience crafted for elegance, comfort, and a truly
@@ -27,15 +31,15 @@ export default function Footer() {
 
           {/* Social icons */}
           <div className="flex gap-4 mt-6">
-            <span className="w-10 h-10 bg-[#F54A00] rounded-full flex justify-center items-center hover:bg-[#c29448] transition cursor-pointer">
+            <Link href="https://www.instagram.com/hotelinnercircle/"><span className="w-10 h-10 bg-[#F54A00] rounded-full flex justify-center items-center hover:bg-[#c29448] transition cursor-pointer">
               <FaInstagram className="text-white text-lg" />
-            </span>
-            <span className="w-10 h-10 bg-[#F54A00] rounded-full flex justify-center items-center hover:bg-[#c29448] transition cursor-pointer">
+            </span></Link>
+            <Link href="https://www.facebook.com/hotelinnercirclehyderabad"><span className="w-10 h-10 bg-[#F54A00] rounded-full flex justify-center items-center hover:bg-[#c29448] transition cursor-pointer">
               <FaFacebookF className="text-white text-lg" />
-            </span>
-            <span className="w-10 h-10 bg-[#F54A00] rounded-full flex justify-center items-center hover:bg-[#c29448] transition cursor-pointer">
+            </span></Link>
+            <Link href="https://www.linkedin.com/showcase/saboorks/?viewAsMember=true"><span className="w-10 h-10 bg-[#F54A00] rounded-full flex justify-center items-center hover:bg-[#c29448] transition cursor-pointer">
               <FaLinkedinIn className="text-white text-lg" />
-            </span>
+            </span></Link>
           </div>
         </div>
 
@@ -51,7 +55,7 @@ export default function Footer() {
             <li className="hover:text-white transition cursor-pointer">
               Dining
             </li>
-        
+
             <li className="hover:text-white transition cursor-pointer">
               Special Offers
             </li>
@@ -97,7 +101,7 @@ export default function Footer() {
               </span>
               <div>
                 <p className="font-medium">Call Us 24/7</p>
-                <p>(+256) 2145.2156</p>
+                <Link href="tel:9848866614"><p>+919848866614</p></Link>
               </div>
             </div>
 
@@ -107,7 +111,7 @@ export default function Footer() {
               </span>
               <div>
                 <p className="font-medium">Email Us</p>
-                <p>info@InnerCircle.com</p>
+                <a href="mailto:info@hotelinnercircle.in">info@hotelinnercircle.in</a>
               </div>
             </div>
 
@@ -117,7 +121,11 @@ export default function Footer() {
               </span>
               <div>
                 <p className="font-medium">Our Location</p>
-                <p>XYZ Hilton 125 Town USA</p>
+                <p>
+                  Hotel Inner Circle, House No: 6-3-905, Raj Bhavan Rd, Matha Nagar,
+                  Somajiguda, Hyderabad, Telangana 500082
+                </p>
+
               </div>
             </div>
           </div>
@@ -129,7 +137,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
 
           <p className="text-gray-500 text-sm">
-            © 2025 Metroluxe — All Rights Reserved
+            © {new Date().getFullYear()} hotelinnercircle — All Rights Reserved
           </p>
 
           <p className="text-gray-500 text-sm mt-2 md:mt-0">

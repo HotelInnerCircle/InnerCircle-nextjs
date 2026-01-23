@@ -5,6 +5,8 @@ import Image from "next/image";
 import { FaStar, FaBed, FaBath, FaRulerCombined } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import BookingForm from "../Forms/BookingForm";
+import Link from "next/link";
+
 
 export default function LuxuryRooms() {
   const [loading, setLoading] = useState(true);
@@ -222,12 +224,19 @@ export default function LuxuryRooms() {
                     </div>
 
                     {/* Button */}
-                    <button
+                    {/* <button
                       onClick={() => handleBookNow(room)}
                       className="w-full py-3 bg-[#1f1c18] text-white rounded-lg text-sm font-medium tracking-wide hover:bg-black transition"
                     >
                       BOOK NOW
-                    </button>
+                    </button> */}
+                    <Link href="https://bookings.resavenue.com/resBooking/rooms?regCode=TZVG1203&roomSearchId=51cc932e10db47048a8e45b7a7ff1ee5&adult_1=2"><button
+
+                      className="w-full py-3 bg-[#1f1c18] text-white rounded-lg text-sm font-medium tracking-wide hover:bg-black transition"
+                    >
+                      BOOK NOW
+                    </button></Link>
+
                   </div>
                 </motion.div>
               ))}

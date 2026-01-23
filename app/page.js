@@ -14,7 +14,7 @@ export default function Home() {
       <RoomsSection />
       <AboutSection />
       <ImageGallery />
-      <InstagramPost />
+      {/* <InstagramPost /> */}
       <TestimonialSection />
     </>
   );
