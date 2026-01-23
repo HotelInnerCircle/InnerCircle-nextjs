@@ -72,7 +72,7 @@ export default function RoomsSection() {
             <span className="w-12 h-px bg-gray-400"></span>
             <Image
               src="/sublogo.svg"
-              width={900}
+              width={200}
               height={100}
               alt="divider"
               className="mx-6 opacity-80"
@@ -89,7 +89,7 @@ export default function RoomsSection() {
         </div>
 
         {/* Rooms Grid */}
-        <div className="px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 " data-aos="fade-up-right ">
+        <div className="px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mx-auto container" data-aos="fade-up-right ">
           {loading
             ? // ⭐ SKELETON LOADING CARDS
             Array.from({ length: 4 }).map((_, index) => (
@@ -122,7 +122,7 @@ export default function RoomsSection() {
             rooms.map((room) => (
               <div
                 key={room.id}
-                className="group bg-white border border-[#e8e3da] rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden "
+                className="group bg-white border border-[#e8e3da] rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden  "
               >
                 {/* Image */}
                 <div className="relative w-full h-64 overflow-hidden">

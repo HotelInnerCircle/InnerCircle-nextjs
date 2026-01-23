@@ -1,6 +1,37 @@
 import React from 'react'
 import ImageGallery from './Gallery'
 import Image from 'next/image'
+export const metadata = {
+  title: "Luxury Rooms | Hotel Inner Circle Hyderabad",
+  description:
+    "Explore luxury rooms at Hotel Inner Circle, Somajiguda Hyderabad. Enjoy premium comfort, elegant interiors, and a relaxing stay experience.",
+  alternates: {
+    canonical: "https://hotelinnercircle.in/rooms",
+  },
+  openGraph: {
+    title: "Luxury Rooms | Hotel Inner Circle",
+    description:
+      "Discover a world of comfort and elegance with our luxury rooms and premium stay experience.",
+    url: "https://hotelinnercircle.in/rooms",
+    siteName: "Hotel Inner Circle",
+    images: [
+      {
+        url: "/Deluxe-King.avif",
+        width: 1200,
+        height: 630,
+        alt: "Hotel Inner Circle Luxury Rooms",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Luxury Rooms | Hotel Inner Circle",
+    description:
+      "Explore our luxury rooms with premium comfort and elegant ambience.",
+    images: ["/Deluxe-King.avif"],
+  },
+};
 
 const page = () => {
   return (
