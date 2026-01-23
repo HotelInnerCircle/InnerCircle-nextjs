@@ -50,6 +50,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <head>
+        <Script id='gtm' strategy='afterInteractive'>
+          {`
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-NX3JSG2Q');
+          `}
+        </Script>
         {/* Google Fonts */}
         <link rel='preconnect' href='https://fonts.googleapis.com' />
         <link
@@ -61,12 +70,24 @@ export default function RootLayout({ children }) {
           href='https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:wght@400;500;600;700;800;900&display=swap'
           rel='stylesheet'
         />
-        <meta name="google-site-verification" content="39VlAlZyNIlP1HTW0Gp-crGOH8nM8uj4VcfA8GiH4ak" />
+        <meta
+          name='google-site-verification'
+          content='39VlAlZyNIlP1HTW0Gp-crGOH8nM8uj4VcfA8GiH4ak'
+        />
       </head>
 
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <noscript>
+          <iframe
+            src='https://www.googletagmanager.com/ns.html?id=GTM-NX3JSG2Q'
+            height='0'
+            width='0'
+            style='display:none;visibility:hidden'
+          ></iframe>
+        </noscript>
+
         {/* ✅ Google tag (gtag.js) */}
         <Script
           strategy='afterInteractive'
