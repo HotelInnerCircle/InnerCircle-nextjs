@@ -61,6 +61,7 @@ export default function RootLayout({ children }) {
           href='https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:wght@400;500;600;700;800;900&display=swap'
           rel='stylesheet'
         />
+        <meta name="google-site-verification" content="39VlAlZyNIlP1HTW0Gp-crGOH8nM8uj4VcfA8GiH4ak" />
       </head>
 
       <body
