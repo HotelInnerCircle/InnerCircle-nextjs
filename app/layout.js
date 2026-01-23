@@ -25,7 +25,7 @@ export const metadata = {
     title: 'Hotel Inner Circle | Luxury Stay in Hyderabad',
     description:
       'Luxury rooms, premium hospitality, and a perfect stay experience at Somajiguda, Hyderabad.',
-   
+
     siteName: 'Hotel Inner Circle',
     images: [
       {
@@ -50,6 +50,20 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <head>
+        {/* ✅ Google tag (gtag.js) */}
+        <Script
+          strategy='afterInteractive'
+          src='https://www.googletagmanager.com/gtag/js?id=G-56FL1KH700'
+        />
+
+        <Script id='google-analytics' strategy='afterInteractive'>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-56FL1KH700');
+          `}
+        </Script>
         <Script id='gtm' strategy='afterInteractive'>
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -87,21 +101,6 @@ export default function RootLayout({ children }) {
             style={{ display: 'none', visibility: 'hidden' }}
           ></iframe>
         </noscript>
-
-        {/* ✅ Google tag (gtag.js) */}
-        <Script
-          strategy='afterInteractive'
-          src='https://www.googletagmanager.com/gtag/js?id=G-56FL1KH700'
-        />
-
-        <Script id='google-analytics' strategy='afterInteractive'>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-56FL1KH700');
-          `}
-        </Script>
 
         <SkeletonTheme baseColor='#202020' highlightColor='#444'>
           <LayoutWrapper>{children}</LayoutWrapper>
