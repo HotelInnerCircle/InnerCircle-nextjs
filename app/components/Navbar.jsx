@@ -72,8 +72,9 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex gap-10">
-            <li className="hover:text-orange-300 duration-200 cursor-pointer">Home</li>
-
+            <Link href="/about-us">
+              <li className="hover:text-orange-300 duration-200 cursor-pointer">About Us</li>
+            </Link>
             <Link href="/ice_spice.php">
               <li className="hover:text-orange-300 duration-200 cursor-pointer">Restaurant</li>
             </Link>
@@ -143,9 +144,9 @@ export default function Navbar() {
 
         {/* MENU LIST */}
         <ul className="flex flex-col px-6 py-8 gap-6 text-[18px] tracking-wide font-light">
-          <Link href="/" onClick={() => setOpen(false)}>
+          <Link href="/about-us" onClick={() => setOpen(false)}>
             <li className="group cursor-pointer flex justify-between items-center">
-              <span className="group-hover:text-[#e8c27d]">Home</span>
+              <span className="group-hover:text-[#e8c27d]">About Us</span>
               <div className="opacity-0 group-hover:opacity-100 w-2 h-2 bg-[#e8c27d] rounded-full" />
             </li>
           </Link>

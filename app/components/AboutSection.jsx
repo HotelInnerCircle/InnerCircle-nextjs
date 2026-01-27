@@ -5,6 +5,7 @@ import Image from "next/image";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { Poppins } from "next/font/google";
+import Link from "next/link";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -64,9 +65,9 @@ export default function AboutSection() {
           {loading ? (
             <Skeleton width={140} height={45} />
           ) : (
-            <button className="bg-orange-500 text-white px-6 py-3 rounded-md font-medium hover:bg-orange-600 duration-300">
+           <Link href="/about-us"> <button className="bg-orange-500 text-white px-6 py-3 rounded-md font-medium hover:bg-orange-600 duration-300">
               Learn More
-            </button>
+            </button></Link>
           )}
         </div>
 
