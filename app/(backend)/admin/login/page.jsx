@@ -152,11 +152,10 @@ export default function HotelAdminLogin() {
                 disabled={loading}
                 className={`w-full py-3 flex items-center justify-center gap-3 
                 rounded-full text-lg font-semibold transition-all duration-300 
-                ${
-                  loading
+                ${loading
                     ? 'bg-amber-500/40 cursor-not-allowed'
                     : 'bg-linear-to-r from-amber-500 to-yellow-600 hover:opacity-90'
-                }`}
+                  }`}
               >
                 <FaSignInAlt />
                 {loading ? "Signing In..." : "Sign In"}
@@ -164,17 +163,26 @@ export default function HotelAdminLogin() {
             </form>
 
             {/* FOOTER */}
-            <p className="mt-8 text-center text-gray-400 text-xs">
-              © {new Date().getFullYear()} Hotel Inner Circle <br />
-              Developed by{" "}
-              <Link
-                href="https://www.broaddcast.com"
-                target="_blank"
-                className="text-amber-300 hover:underline"
-              >
-                Broaddcast Digital
-              </Link>
+            <p className="mt-8 text-center text-gray-400 text-xs flex flex-col items-center gap-2">
+              © {new Date().getFullYear()} Hotel Inner Circle
+              <span className="flex items-center gap-2">
+                Developed by
+                <Link
+                  href="https://www.broaddcast.com"
+                  target="_blank"
+                  className="flex items-center gap-2 text-amber-300 hover:underline"
+                >
+                  <Image
+                    src="/logo-white (1).svg"
+                    alt="Broaddcast Digital Logo"
+                    width={110}
+                    height={30}
+                    className="object-contain hover:opacity-80 transition"
+                  />
+                </Link>
+              </span>
             </p>
+
           </div>
         </motion.div>
       </div>
