@@ -140,9 +140,23 @@ export default function Footer() {
             © {new Date().getFullYear()} hotelinnercircle — All Rights Reserved
           </p>
 
-          <p className="text-gray-500 text-sm mt-2 md:mt-0">
-            Designed & Developed by <span className="text-[#F54A00] font-semibold">Broaddcast</span>
+          <p className="flex items-center gap-2 text-gray-500 text-sm mt-2 md:mt-0">
+            Designed & Developed by
+            <a
+              href="https://broaddcast.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/logo-white (1).svg"
+                alt="Broaddcast Logo"
+                width={110}
+                height={30}
+                className="hover:opacity-80 transition"
+              />
+            </a>
           </p>
+
 
 
           {/* <button

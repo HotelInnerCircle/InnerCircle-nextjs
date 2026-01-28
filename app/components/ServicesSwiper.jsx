@@ -17,12 +17,28 @@ export default function ServicesSwiper() {
   }, []);
 
   const services = [
-    { title: "Wedding Planning", subtitle: "Your Dream Wedding, Perfectly Planned", img: "/Deluxe-King.avif" },
-    { title: "Fine Dinning", subtitle: "Your Dream Wedding, Perfectly Planned", img: "/Deluxe-King.avif" },
-    { title: "Corporate Event Decor", subtitle: "Your Dream Wedding, Perfectly Planned", img: "/Deluxe-King.avif" },
-    { title: "Dinner Planning", subtitle: "Your Dream Wedding, Perfectly Planned", img: "/Deluxe-King.avif" },
-    { title: "Dinner Planning", subtitle: "Your Dream Wedding, Perfectly Planned", img: "/Deluxe-King.avif" },
+    {
+      title: "Wedding Planning",
+      subtitle: "Your dream wedding, thoughtfully planned and flawlessly executed",
+      img: "/banquet/DSC02785.webp",
+    },
+    {
+      title: "Fine Dining",
+      subtitle: "Exquisite cuisine crafted for unforgettable dining experiences",
+      img: "/banquet/IMG20220917152917.webp",
+    },
+    {
+      title: "Corporate Event Decor",
+      subtitle: "Professional décor solutions that elevate your corporate events",
+      img: "/banquet/IMG20220917172355.webp",
+    },
+    {
+      title: "Dinner Planning",
+      subtitle: "Elegant dinner setups designed for memorable gatherings",
+      img: "/banquet/Restaurant 1 (1).webp",
+    },
   ];
+
 
   return (
     <section className="w-full py-16 bg-white relative">
