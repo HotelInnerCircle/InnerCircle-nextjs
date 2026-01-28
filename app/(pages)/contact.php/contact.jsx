@@ -17,7 +17,7 @@ export default function ContactPage() {
 
       {/* ================= HERO ================= */}
       <section className="relative  w-full h-[420px] md:h-[520px] overflow-hidden -z-40">
-        
+
         {loading ? (
           <div className="w-full h-full bg-gray-200 animate-pulse"></div>
         ) : (
@@ -86,8 +86,8 @@ export default function ContactPage() {
                     <FiPhone className="text-3xl text-[#C7A27C]" />
                   </div>
                   <h4 className="mt-4 font-semibold text-lg">Phone</h4>
-                  <a href="tel:+919848866614" className="text-gray-700 hover:text-[#C7A27C] transition mt-1">
-                    +91 9848866614
+                  <a href="tel:+919951699516" className="text-gray-700 hover:text-[#C7A27C] transition mt-1">
+                    +91 9951699516
                   </a>
                 </div>
 
@@ -109,7 +109,7 @@ export default function ContactPage() {
                   </div>
                   <h4 className="mt-4 font-semibold text-lg">Location</h4>
                   <p className="text-gray-700 mt-1 leading-relaxed">
-                   Hotel Inner Circle, House No: 6-3-905,<br/> Raj Bhavan Rd, Matha Nagar,<br/> Somajiguda, Hyderabad, Telangana 500082
+                    Hotel Inner Circle, House No: 6-3-905,<br /> Raj Bhavan Rd, Matha Nagar,<br /> Somajiguda, Hyderabad, Telangana 500082
                   </p>
                 </div>
               </div>

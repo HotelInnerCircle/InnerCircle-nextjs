@@ -101,7 +101,7 @@ export default function Footer() {
               </span>
               <div>
                 <p className="font-medium">Call Us 24/7</p>
-                <Link href="tel:9848866614"><p>+919848866614</p></Link>
+                <Link href="tel:9951699516"><p>+919951699516</p></Link>
               </div>
             </div>
 

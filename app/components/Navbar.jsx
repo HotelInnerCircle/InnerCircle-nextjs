@@ -46,10 +46,10 @@ export default function Navbar() {
           <div className="flex items-center gap-2">
             <FaPhone className="text-sm" />
             <a
-              href="tel:+919848866614"
+              href="tel:+919951699516"
               className="hover:underline"
             >
-              +919848866614
+              +919951699516
             </a>
           </div>
 

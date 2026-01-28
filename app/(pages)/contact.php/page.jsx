@@ -3,7 +3,7 @@ import ContactPage from './contact'
 export const metadata = {
   title: "Contact Us | Hotel Inner Circle Hyderabad",
   description:
-    "Contact Hotel Inner Circle, Somajiguda Hyderabad for room reservations, events, and enquiries. Call +91 9848866614 or email info@hotelinnercircle.in.",
+    "Contact Hotel Inner Circle, Somajiguda Hyderabad for room reservations, events, and enquiries. Call +91 9951699516 or email info@hotelinnercircle.in.",
   alternates: {
     canonical: "https://hotelinnercircle.in/contact",
   },
