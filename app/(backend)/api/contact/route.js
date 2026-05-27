@@ -1,6 +1,7 @@
 import { ConnectDB } from '@/lib/config/db';
 import { NextResponse } from 'next/server';
 import Contact from '@/lib/models/contact';
+import { requireAdminAuth } from '@/lib/adminAuth';
 
 export async function POST(req) {
   try {
@@ -21,11 +22,15 @@ export async function POST(req) {
       { status: 201 }
     );
   } catch (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error('Contact POST error:', error);
+    return NextResponse.json({ error: 'Failed to save contact' }, { status: 500 });
   }
 }
 
 export async function GET(req) {
+  const authError = requireAdminAuth(req);
+  if (authError) return authError;
+
   try {
     await ConnectDB();
     const contacts = await Contact.find().sort({ createdAt: -1 });
@@ -34,6 +39,7 @@ export async function GET(req) {
       { status: 200 }
     );
   } catch (error) {
-    return NextResponse.json({ error: error.message }, { status: 500 });
+    console.error('Contact GET error:', error);
+    return NextResponse.json({ error: 'Failed to fetch contacts' }, { status: 500 });
   }
 }

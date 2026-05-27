@@ -3,9 +3,17 @@ import { NextResponse } from 'next/server';
 export async function POST(request) {
   const { email, password } = await request.json();
 
-  // ✅ Example admin credentials (use env variables in real project)
   const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
   const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+  const SESSION_SECRET = process.env.SESSION_SECRET;
+
+  if (!SESSION_SECRET) {
+    console.error('SESSION_SECRET env variable is not set');
+    return NextResponse.json(
+      { success: false, error: 'Server misconfiguration' },
+      { status: 500 }
+    );
+  }
 
   if (email === ADMIN_EMAIL && password === ADMIN_PASSWORD) {
     const res = NextResponse.json({
@@ -13,11 +21,11 @@ export async function POST(request) {
       message: 'Login successful',
     });
 
-    // ✅ Set auth cookie (expires in 1 day)
-    res.cookies.set('adminAuth', 'true', {
+    res.cookies.set('adminAuth', SESSION_SECRET, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
-      maxAge: 24 * 60 * 60, // 1 day
+      sameSite: 'strict',
+      maxAge: 24 * 60 * 60,
       path: '/',
     });
 

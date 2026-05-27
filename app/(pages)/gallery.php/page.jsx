@@ -2,34 +2,53 @@ import React from 'react'
 import ImageGallery from './Gallery'
 import Image from 'next/image'
 export const metadata = {
-  title: "Luxury Rooms | Hotel Inner Circle Hyderabad",
+  title: "Photo Gallery | Hotel Inner Circle – Rooms, Banquet & Lobby | Hyderabad",
   description:
-    "Explore luxury rooms at Hotel Inner Circle, Somajiguda Hyderabad. Enjoy premium comfort, elegant interiors, and a relaxing stay experience.",
+    "Browse the photo gallery of Hotel Inner Circle, Somajiguda Hyderabad. View images of our luxury rooms, elegant banquet halls, reception lobby, and hotel interiors.",
+  keywords: [
+    "Hotel Inner Circle gallery",
+    "hotel photos Hyderabad",
+    "hotel room images Hyderabad",
+    "banquet hall photos Hyderabad",
+    "Hotel Inner Circle Somajiguda photos",
+  ],
   alternates: {
-    canonical: "https://hotelinnercircle.in/rooms",
+    canonical: "https://hotelinnercircle.in/gallery.php",
   },
   openGraph: {
-    title: "Luxury Rooms | Hotel Inner Circle",
+    title: "Photo Gallery | Hotel Inner Circle Hyderabad",
     description:
-      "Discover a world of comfort and elegance with our luxury rooms and premium stay experience.",
-    url: "https://hotelinnercircle.in/rooms",
+      "Explore photos of luxury rooms, banquet halls, and hotel facilities at Hotel Inner Circle, Somajiguda Hyderabad.",
+    url: "https://hotelinnercircle.in/gallery.php",
     siteName: "Hotel Inner Circle",
     images: [
       {
-        url: "/Deluxe-King.avif",
+        url: "https://ik.imagekit.io/b7gayfw2v/Gallery/banquetHall/5.Inner%20Circle%20Reception%20Lobby.jpg",
         width: 1200,
         height: 630,
-        alt: "Hotel Inner Circle Luxury Rooms",
+        alt: "Hotel Inner Circle Gallery – Hyderabad",
       },
     ],
+    locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxury Rooms | Hotel Inner Circle",
+    title: "Photo Gallery | Hotel Inner Circle Hyderabad",
     description:
-      "Explore our luxury rooms with premium comfort and elegant ambience.",
-    images: ["/Deluxe-King.avif"],
+      "View photos of rooms, banquet halls, and hotel facilities at Hotel Inner Circle, Somajiguda Hyderabad.",
+    images: [
+      "https://ik.imagekit.io/b7gayfw2v/Gallery/banquetHall/5.Inner%20Circle%20Reception%20Lobby.jpg",
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+    },
   },
 };
 

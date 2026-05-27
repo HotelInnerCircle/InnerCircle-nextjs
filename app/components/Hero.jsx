@@ -47,13 +47,13 @@ export default function Hero() {
       </div>
 
       {/* BOOKING SYSTEM */}
-      {loading ? (
-        // ⭐ Skeleton Loader
+      {/* {loading ? (
+       
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full 
         bg-black/30 backdrop-blur-xl px-6 md:px-10 py-7 
         flex flex-wrap md:flex-nowrap justify-between items-center gap-6">
 
-          {/* Skeleton Item */}
+      
           {[1, 2, 3, 4, 5].map((_, i) => (
             <div key={i} className="flex flex-col flex-1 gap-3">
               <div className="h-3 w-20 bg-white/20 rounded animate-pulse"></div>
@@ -63,12 +63,12 @@ export default function Hero() {
 
         </div>
       ) : (
-        // ⭐ Actual Booking Bar
+       
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full 
         bg-black/40 backdrop-blur-xl px-6 md:px-10 py-7 
         flex flex-wrap md:flex-nowrap justify-between items-center text-white gap-6 shadow-[0_-4px_30px_rgba(0,0,0,0.4)]">
 
-          {/* Check In */}
+      
           <div className="flex flex-col flex-1">
             <label className="opacity-90 text-sm">Check In</label>
             <DatePicker
@@ -78,7 +78,7 @@ export default function Hero() {
             />
           </div>
 
-          {/* Check Out */}
+        
           <div className="flex flex-col flex-1">
             <label className="opacity-90 text-sm">Check Out</label>
             <DatePicker
@@ -88,7 +88,7 @@ export default function Hero() {
             />
           </div>
 
-          {/* Adults */}
+        
           <div className="flex flex-col flex-1">
             <label className="opacity-90 text-sm">Adult</label>
             <div className="flex items-center gap-4 mt-1">
@@ -108,7 +108,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Children */}
           <div className="flex flex-col flex-1">
             <label className="opacity-90 text-sm">Child</label>
             <div className="flex items-center gap-4 mt-1">
@@ -128,12 +127,11 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Button */}
           <button className="bg-[#F54A00] hover:bg-[#d84300] px-10 py-3 rounded-md font-semibold whitespace-nowrap text-white shadow-xl">
             Check Now
           </button>
         </div>
-      )}
+      )} */}
     </div>
   );
 }

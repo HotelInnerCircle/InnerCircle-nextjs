@@ -1,9 +1,55 @@
 import Image from "next/image";
 
 export const metadata = {
-  title: "About Us | Inner Circle Hotel Hyderabad",
+  title: "About Us | Hotel Inner Circle – Somajiguda, Hyderabad",
   description:
-    "Inner Circle is a smart and affordable business hotel in Somajiguda, Hyderabad, offering elegant interiors, modern comforts, and award-winning hospitality.",
+    "Learn about Hotel Inner Circle – a smart, affordable, and elegant hotel in Somajiguda, Hyderabad. Discover our story, values, and commitment to exceptional hospitality.",
+  keywords: [
+    "about Hotel Inner Circle",
+    "Hotel Inner Circle Hyderabad",
+    "hotel Somajiguda",
+    "affordable luxury hotel Hyderabad",
+    "business hotel Hyderabad",
+  ],
+  alternates: {
+    canonical: "https://hotelinnercircle.in/about-us",
+  },
+  openGraph: {
+    title: "About Us | Hotel Inner Circle – Somajiguda, Hyderabad",
+    description:
+      "Hotel Inner Circle is a smart and affordable business hotel in Somajiguda, Hyderabad, offering elegant interiors and award-winning hospitality.",
+    url: "https://hotelinnercircle.in/about-us",
+    siteName: "Hotel Inner Circle",
+    images: [
+      {
+        url: "https://ik.imagekit.io/b7gayfw2v/Gallery/banquetHall/5.Inner%20Circle%20Reception%20Lobby.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hotel Inner Circle – About Us",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | Hotel Inner Circle – Somajiguda, Hyderabad",
+    description:
+      "Discover the story behind Hotel Inner Circle – affordable luxury and warm hospitality in Hyderabad.",
+    images: [
+      "https://ik.imagekit.io/b7gayfw2v/Gallery/banquetHall/5.Inner%20Circle%20Reception%20Lobby.jpg",
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+    },
+  },
 };
 
 export default function AboutPage() {

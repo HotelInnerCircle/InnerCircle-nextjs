@@ -2,34 +2,55 @@ import React from 'react'
 import Menu from './Menu'
 import Image from 'next/image'
 export const metadata = {
-  title: "Restaurant Menu | Hotel Inner Circle Hyderabad",
+  title: "Ice & Spice Restaurant Menu | Hotel Inner Circle Hyderabad",
   description:
-    "Explore the restaurant menu at Hotel Inner Circle, Hyderabad. Discover delicious dishes, beverages, and premium dining options.",
+    "Explore the Ice & Spice restaurant menu at Hotel Inner Circle, Somajiguda Hyderabad. Enjoy delicious Indian and continental dishes, beverages, and a premium in-house dining experience.",
+  keywords: [
+    "Ice and Spice restaurant Hyderabad",
+    "Hotel Inner Circle restaurant",
+    "restaurant menu Somajiguda",
+    "in-house dining Hyderabad",
+    "hotel restaurant Hyderabad",
+    "dining Hotel Inner Circle",
+  ],
   alternates: {
-    canonical: "https://hotelinnercircle.in/menu",
+    canonical: "https://hotelinnercircle.in/ice_spice.php",
   },
   openGraph: {
-    title: "Restaurant Menu | Hotel Inner Circle",
+    title: "Ice & Spice Restaurant Menu | Hotel Inner Circle Hyderabad",
     description:
-      "Browse our menu and enjoy a premium dining experience at Hotel Inner Circle Hyderabad.",
-    url: "https://hotelinnercircle.in/menu",
+      "Browse the Ice & Spice menu and enjoy a premium in-house dining experience at Hotel Inner Circle, Somajiguda Hyderabad.",
+    url: "https://hotelinnercircle.in/ice_spice.php",
     siteName: "Hotel Inner Circle",
     images: [
       {
-        url: "/Deluxe-King.avif",
+        url: "https://ik.imagekit.io/b7gayfw2v/Gallery/banquetHall/5.Inner%20Circle%20Reception%20Lobby.jpg",
         width: 1200,
         height: 630,
-        alt: "Hotel Inner Circle Menu",
+        alt: "Ice & Spice Restaurant – Hotel Inner Circle Hyderabad",
       },
     ],
+    locale: "en_IN",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Restaurant Menu | Hotel Inner Circle",
+    title: "Ice & Spice Restaurant | Hotel Inner Circle Hyderabad",
     description:
-      "Explore the Hotel Inner Circle restaurant menu and dining options.",
-    images: ["/Deluxe-King.avif"],
+      "Enjoy premium in-house dining at the Ice & Spice restaurant, Hotel Inner Circle, Somajiguda Hyderabad.",
+    images: [
+      "https://ik.imagekit.io/b7gayfw2v/Gallery/banquetHall/5.Inner%20Circle%20Reception%20Lobby.jpg",
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+    },
   },
 };
 

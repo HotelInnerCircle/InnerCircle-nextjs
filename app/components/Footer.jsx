@@ -59,9 +59,11 @@ export default function Footer() {
             <li className="hover:text-white transition cursor-pointer">
               Special Offers
             </li>
-            <li className="hover:text-white transition cursor-pointer">
-              Blog
-            </li>
+            <Link href="/blog">
+              <li className="hover:text-white transition cursor-pointer">
+                Blog
+              </li>
+            </Link>
           </ul>
         </div>
 

@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['i.ibb.co', 'www.hotelinnercircle.in','ik.imagekit.io','mindfulmocktail.com'],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'i.ibb.co' },
+      { protocol: 'https', hostname: 'www.hotelinnercircle.in' },
+      { protocol: 'https', hostname: 'ik.imagekit.io' },
+      { protocol: 'https', hostname: 'mindfulmocktail.com' },
+    ],
   },
   reactCompiler: true,
 };

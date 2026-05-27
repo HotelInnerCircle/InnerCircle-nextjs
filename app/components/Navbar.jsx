@@ -87,6 +87,10 @@ export default function Navbar() {
               <li className="hover:text-orange-300 duration-200 cursor-pointer">Gallery</li>
             </Link>
 
+            <Link href="/blog">
+              <li className="hover:text-orange-300 duration-200 cursor-pointer">Blog</li>
+            </Link>
+
             {/* Dropdown */}
             <li
               className="relative cursor-pointer"
@@ -180,6 +184,12 @@ export default function Navbar() {
           <Link href="/gallery.php" onClick={() => setOpen(false)}>
             <li className="group cursor-pointer flex justify-between items-center">
               <span className="group-hover:text-[#e8c27d]">Gallery</span>
+              <div className="opacity-0 group-hover:opacity-100 w-2 h-2 bg-[#e8c27d] rounded-full" />
+            </li>
+          </Link>
+          <Link href="/blog" onClick={() => setOpen(false)}>
+            <li className="group cursor-pointer flex justify-between items-center">
+              <span className="group-hover:text-[#e8c27d]">Blog</span>
               <div className="opacity-0 group-hover:opacity-100 w-2 h-2 bg-[#e8c27d] rounded-full" />
             </li>
           </Link>

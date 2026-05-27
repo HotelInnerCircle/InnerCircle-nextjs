@@ -1,4 +1,15 @@
-"use client";
+export const metadata = {
+  title: "Privacy Policy | Hotel Inner Circle Hyderabad",
+  description:
+    "Read the Privacy Policy of Hotel Inner Circle, Somajiguda Hyderabad. Learn about data collection, usage, cancellation policy, child policy, and terms & conditions.",
+  alternates: {
+    canonical: "https://hotelinnercircle.in/privacy.php",
+  },
+  robots: {
+    index: true,
+    follow: false,
+  },
+};
 
 export default function PrivacyPolicy() {
   return (
@@ -11,7 +22,7 @@ export default function PrivacyPolicy() {
         </h1>
 
         <p className="text-center text-gray-500 mb-10">
-          Last Updated: {new Date().toLocaleDateString()}
+          Last Updated: January 2025
         </p>
 
         {/* Section 1 */}
