@@ -49,6 +49,23 @@ export const metadata = {
 
 const posts = [
   {
+    slug: '/blog/travel-smarter-benefits-of-booking-hotel-inner-circle',
+    tag: 'Travel Guide',
+    title: 'Travel Smarter: Benefits of Booking a Stay at Hotel Inner Circle in Somajiguda',
+    excerpt:
+      "Discover why Hotel Inner Circle in Somajiguda is the smart choice for travelers. Prime location on Raj Bhavan Road, comfortable rooms, business facilities, in-house dining, and easy access to Hyderabad's top attractions.",
+    img: 'https://ik.imagekit.io/b7gayfw2v/Gallery/banquetHall/5.Inner%20Circle%20Reception%20Lobby.jpg',
+    date: 'June 2, 2026',
+    readTime: '7 min read',
+    location: 'Somajiguda, Hyderabad',
+    highlights: [
+      'Prime Raj Bhavan Road location',
+      'Business & conference facilities',
+      'Near Yashoda Hospitals',
+      'Access to top attractions',
+    ],
+  },
+  {
     slug: '/blog/hotels-in-somajiguda-hyderabad',
     tag: 'Travel Guide',
     title: 'Hotels in Somajiguda Hyderabad – Comfortable Stay Near Key Locations',
@@ -82,6 +99,7 @@ const posts = [
       'Professional hospitality',
     ],
   },
+
 ];
 
 export default function BlogIndex() {

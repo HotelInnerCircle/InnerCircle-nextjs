@@ -4,6 +4,17 @@ import { FaMapMarkerAlt, FaCalendarAlt, FaClock, FaArrowRight } from 'react-icon
 
 const posts = [
   {
+    slug: '/blog/travel-smarter-benefits-of-booking-hotel-inner-circle',
+    tag: 'Travel Guide',
+    title: 'Travel Smarter: Benefits of Booking a Stay at Hotel Inner Circle in Somajiguda',
+    excerpt:
+      "Discover why Hotel Inner Circle in Somajiguda is the smart choice for travelers. Prime location on Raj Bhavan Road, comfortable rooms, business facilities, and easy access to Hyderabad's top attractions.",
+    img: 'https://ik.imagekit.io/b7gayfw2v/Gallery/banquetHall/5.Inner%20Circle%20Reception%20Lobby.jpg',
+    date: 'June 2, 2026',
+    readTime: '7 min read',
+    location: 'Somajiguda, Hyderabad',
+  },
+  {
     slug: '/blog/hotels-in-somajiguda-hyderabad',
     tag: 'Travel Guide',
     title: 'Hotels in Somajiguda Hyderabad – Comfortable Stay Near Key Locations',
@@ -54,7 +65,7 @@ export default function BlogPreview() {
         </div>
 
         {/* Blog cards grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post, i) => (
             <article
               key={i}
