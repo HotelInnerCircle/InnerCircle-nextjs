@@ -64,7 +64,7 @@ export default function Footer() {
                 Blog
               </li>
             </Link>
-            <Link href="/faq">
+            <Link href="/FAQ">
               <li className="hover:text-white transition cursor-pointer">
                 FAQs
               </li>
