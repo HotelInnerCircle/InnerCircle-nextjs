@@ -5,6 +5,8 @@ import React from 'react'
 import ImageGallery from '../gallery.php/Gallery'
 import InstagramPost from '@/app/components/InstagramPost'
 import TestimonialSection from '@/app/components/TestimonialSection'
+import FaqSection from '@/app/components/FaqSection'
+import BlogPreview from '@/app/components/BlogPreview'
 export const metadata = {
   title: "Hotel Inner Circle | Luxury Stay in Somajiguda, Hyderabad",
   description:
@@ -44,6 +46,8 @@ export default function page() {
       <AboutSection />
       <ImageGallery />
       {/* <InstagramPost /> */}
-      <TestimonialSection /></div>
+      <TestimonialSection />
+      <BlogPreview />
+      <FaqSection /></div>
   )
 }

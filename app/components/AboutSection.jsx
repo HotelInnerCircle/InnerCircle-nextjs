@@ -48,7 +48,7 @@ export default function AboutSection() {
             <Skeleton height={40} width={"80%"} className="mx-auto lg:mx-0 mb-6" />
           ) : (
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight mb-6">
-              Welcome to Our Inner Circle <br /> Hotel & Resort
+              Welcome to Our Inner Circle <br /> Hotel 
             </h2>
           )}
 
