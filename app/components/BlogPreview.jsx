@@ -4,6 +4,17 @@ import { FaMapMarkerAlt, FaCalendarAlt, FaClock, FaArrowRight } from 'react-icon
 
 const posts = [
   {
+    slug: '/blog/best-hotels-near-hospitals-somajiguda-hyderabad',
+    tag: 'Medical Travel',
+    title: 'Best Hotels Near Top Hospitals in Somajiguda – Why Hotel Inner Circle is the Smart Choice',
+    excerpt:
+      'Traveling to Hyderabad for medical treatment? Hotel Inner Circle is close to Yashoda Hospitals, NIMS, Aster Prime, and CARE Hospitals — ideal for patients and families.',
+    img: 'https://ik.imagekit.io/b7gayfw2v/Gallery/banquetHall/5.Inner%20Circle%20Reception%20Lobby.jpg',
+    date: 'June 4, 2026',
+    readTime: '6 min read',
+    location: 'Somajiguda, Hyderabad',
+  },
+  {
     slug: '/blog/travel-smarter-benefits-of-booking-hotel-inner-circle',
     tag: 'Travel Guide',
     title: 'Travel Smarter: Benefits of Booking a Stay at Hotel Inner Circle in Somajiguda',
@@ -24,17 +35,6 @@ const posts = [
     date: 'May 27, 2026',
     readTime: '8 min read',
     location: 'Somajiguda, Hyderabad',
-  },
-  {
-    slug: '/blog/best-hotels-in-hyderabad-luxury-banquet',
-    tag: 'Hotel Guide',
-    title: 'Best Hotels in Hyderabad for Luxury Stay & Banquet Halls',
-    excerpt:
-      'Looking for a hotel with elegant banquet halls? Hotel Inner Circle offers luxury rooms and professional event facilities for weddings, corporate events, and family gatherings.',
-    img: 'https://ik.imagekit.io/b7gayfw2v/Gallery/banquetHall/9.Inner%20Circle%20Influence.%20Banquet%20Hall.jpg',
-    date: 'May 27, 2026',
-    readTime: '7 min read',
-    location: 'Hyderabad, Telangana',
   },
 ];
 

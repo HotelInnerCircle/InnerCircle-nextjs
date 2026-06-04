@@ -49,6 +49,23 @@ export const metadata = {
 
 const posts = [
   {
+    slug: '/blog/best-hotels-near-hospitals-somajiguda-hyderabad',
+    tag: 'Medical Travel',
+    title: 'Best Hotels Near Top Hospitals in Somajiguda – Why Hotel Inner Circle is the Smart Choice',
+    excerpt:
+      'Traveling to Hyderabad for medical treatment? Hotel Inner Circle in Somajiguda is close to Yashoda Hospitals, NIMS, Aster Prime, CARE Hospitals and more — ideal for patients and families.',
+    img: 'https://ik.imagekit.io/b7gayfw2v/Gallery/banquetHall/5.Inner%20Circle%20Reception%20Lobby.jpg',
+    date: 'June 4, 2026',
+    readTime: '6 min read',
+    location: 'Somajiguda, Hyderabad',
+    highlights: [
+      'Near Yashoda & NIMS Hospitals',
+      'Ideal for medical travelers',
+      'Affordable & comfortable rooms',
+      'Family-friendly environment',
+    ],
+  },
+  {
     slug: '/blog/travel-smarter-benefits-of-booking-hotel-inner-circle',
     tag: 'Travel Guide',
     title: 'Travel Smarter: Benefits of Booking a Stay at Hotel Inner Circle in Somajiguda',
