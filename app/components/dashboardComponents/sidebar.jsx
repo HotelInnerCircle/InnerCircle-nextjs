@@ -15,6 +15,8 @@ import axios from "axios";
 import { ImWindows8 } from "react-icons/im";
 import { VscBook } from "react-icons/vsc";
 import { BsPostcard } from "react-icons/bs";
+import { FaImages } from "react-icons/fa";
+import { BsFilePost } from "react-icons/bs";
 
 export default function Sidebar({ isCollapsed, toggleSidebar, pathname }) {
   const router = useRouter();
@@ -95,6 +97,20 @@ export default function Sidebar({ isCollapsed, toggleSidebar, pathname }) {
             to="/admin/contact-us"
             icon={MdContacts}
             active={pathname === "/admin/contact-us"}
+          />
+          <SidebarMenuItem
+            isCollapsed={isCollapsed}
+            text="Gallery"
+            to="/admin/gallery"
+            icon={FaImages}
+            active={pathname === "/admin/gallery"}
+          />
+          <SidebarMenuItem
+            isCollapsed={isCollapsed}
+            text="Blog Posts"
+            to="/admin/blogs"
+            icon={BsFilePost}
+            active={pathname === "/admin/blogs"}
           />
 
         </div>

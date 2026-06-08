@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaCalendarAlt, FaClock, FaArrowRight } from 'react-icons/fa';
+import { ConnectDB } from '@/lib/config/db';
+import Blog from '@/lib/models/Blog';
 
 export const metadata = {
   title: 'Hotel Blog – Travel Tips & Guides for Hyderabad | Hotel Inner Circle',
@@ -47,7 +49,7 @@ export const metadata = {
   robots: { index: true, follow: true },
 };
 
-const posts = [
+const staticPosts = [
   {
     slug: '/blog/best-hotels-near-hospitals-somajiguda-hyderabad',
     tag: 'Medical Travel',
@@ -119,7 +121,28 @@ const posts = [
 
 ];
 
-export default function BlogIndex() {
+export default async function BlogIndex() {
+  let dbPosts = [];
+  try {
+    await ConnectDB();
+    const raw = await Blog.find({ published: true }).sort({ createdAt: -1 }).lean();
+    dbPosts = raw.map((b) => ({
+      slug: `/blog/${b.slug}`,
+      tag: b.tag,
+      title: b.title,
+      excerpt: b.excerpt,
+      img: b.img,
+      date: new Date(b.createdAt).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' }),
+      readTime: b.readTime,
+      location: b.location,
+      highlights: b.highlights || [],
+    }));
+  } catch {
+    // DB unavailable — show only static posts
+  }
+
+  const allPosts = [...dbPosts, ...staticPosts];
+
   return (
     <main className="">
       {/* ── HERO ── */}
@@ -162,7 +185,7 @@ export default function BlogIndex() {
       {/* ── POSTS GRID ── */}
       <section className="container mx-auto max-w-5xl px-6 py-16">
         <div className="grid grid-cols-1 gap-10">
-          {posts.map((post, i) => (
+          {allPosts.map((post, i) => (
             <article
               key={i}
               className="group bg-white rounded-3xl overflow-hidden shadow-lg border border-[#e7d7b6] hover:shadow-2xl hover:border-[#a17c36] transition-all duration-300 grid grid-cols-1 lg:grid-cols-2"
