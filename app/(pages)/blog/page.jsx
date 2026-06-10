@@ -4,6 +4,8 @@ import { FaMapMarkerAlt, FaCalendarAlt, FaClock, FaArrowRight } from 'react-icon
 import { ConnectDB } from '@/lib/config/db';
 import Blog from '@/lib/models/Blog';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'Hotel Blog – Travel Tips & Guides for Hyderabad | Hotel Inner Circle',
   description:
@@ -141,7 +143,8 @@ export default async function BlogIndex() {
     // DB unavailable — show only static posts
   }
 
-  const allPosts = [...dbPosts, ...staticPosts];
+  const dbSlugs = new Set(dbPosts.map((p) => p.slug));
+  const allPosts = [...dbPosts, ...staticPosts.filter((p) => !dbSlugs.has(p.slug))];
 
   return (
     <main className="">

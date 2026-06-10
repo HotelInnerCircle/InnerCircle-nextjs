@@ -7,6 +7,9 @@ import InstagramPost from '@/app/components/InstagramPost'
 import TestimonialSection from '@/app/components/TestimonialSection'
 import FaqSection from '@/app/components/FaqSection'
 import BlogPreview from '@/app/components/BlogPreview'
+
+export const revalidate = 0;
+
 export const metadata = {
   title: "Hotel Inner Circle | Luxury Stay in Somajiguda, Hyderabad",
   description:

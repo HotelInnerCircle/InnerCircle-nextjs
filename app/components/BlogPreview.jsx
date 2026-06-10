@@ -1,8 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { FaMapMarkerAlt, FaCalendarAlt, FaClock, FaArrowRight } from 'react-icons/fa';
+import { ConnectDB } from '@/lib/config/db';
+import Blog from '@/lib/models/Blog';
 
-const posts = [
+const FALLBACK_POSTS = [
   {
     slug: '/blog/best-hotels-near-hospitals-somajiguda-hyderabad',
     tag: 'Medical Travel',
@@ -38,7 +40,32 @@ const posts = [
   },
 ];
 
-export default function BlogPreview() {
+export default async function BlogPreview() {
+  let posts = FALLBACK_POSTS;
+  try {
+    await ConnectDB();
+    const raw = await Blog.find({ published: true })
+      .sort({ createdAt: -1 })
+      .limit(3)
+      .lean();
+    if (raw.length > 0) {
+      posts = raw.map((b) => ({
+        slug: `/blog/${b.slug}`,
+        tag: b.tag,
+        title: b.title,
+        excerpt: b.excerpt,
+        img: b.img,
+        date: new Date(b.createdAt).toLocaleDateString('en-IN', {
+          day: 'numeric', month: 'long', year: 'numeric',
+        }),
+        readTime: b.readTime,
+        location: b.location,
+      }));
+    }
+  } catch {
+    // DB unavailable — use fallback
+  }
+
   return (
     <section className="w-full py-20 bg-[#faf6ef]">
       <div className="container mx-auto px-6 md:px-10 max-w-6xl">
@@ -87,7 +114,6 @@ export default function BlogPreview() {
 
               {/* Content */}
               <div className="p-7 flex flex-col flex-1">
-                {/* Meta */}
                 <div className="flex flex-wrap gap-x-4 gap-y-1.5 text-gray-400 text-xs mb-4">
                   <span className="flex items-center gap-1.5">
                     <FaCalendarAlt className="text-[#a17c36]" /> {post.date}
@@ -100,19 +126,16 @@ export default function BlogPreview() {
                   </span>
                 </div>
 
-                {/* Title */}
                 <Link href={post.slug}>
                   <h3 className="text-xl font-serif font-bold text-gray-900 leading-snug mb-3 hover:text-[#a17c36] transition-colors duration-200 line-clamp-2">
                     {post.title}
                   </h3>
                 </Link>
 
-                {/* Excerpt */}
                 <p className="text-gray-500 text-sm leading-relaxed mb-6 line-clamp-3 flex-1">
                   {post.excerpt}
                 </p>
 
-                {/* CTA */}
                 <Link
                   href={post.slug}
                   className="inline-flex items-center gap-2 self-start px-6 py-2.5 bg-[#a17c36] hover:bg-[#8b6a2b] text-white font-semibold rounded-full transition-colors duration-200 shadow-md text-sm group/btn"
