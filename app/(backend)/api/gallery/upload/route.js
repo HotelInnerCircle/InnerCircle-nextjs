@@ -29,21 +29,18 @@ export async function POST(req) {
     const base64File = buffer.toString('base64');
 
     const fileName = `gallery_${Date.now()}_${file.name.replace(/\s+/g, '_')}`;
-
     const auth = Buffer.from(privateKey + ':').toString('base64');
+
+    const fd = new FormData();
+    fd.append('file', `data:${file.type || 'image/jpeg'};base64,${base64File}`);
+    fd.append('fileName', fileName);
+    fd.append('folder', '/Gallery/admin');
+    fd.append('useUniqueFileName', 'true');
 
     const ikRes = await fetch('https://upload.imagekit.io/api/v1/files/upload', {
       method: 'POST',
-      headers: {
-        Authorization: `Basic ${auth}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        file: base64File,
-        fileName,
-        folder: '/Gallery/admin',
-        useUniqueFileName: true,
-      }),
+      headers: { Authorization: `Basic ${auth}` },
+      body: fd,
     });
 
     if (!ikRes.ok) {
