@@ -7,9 +7,10 @@ import { ConnectDB } from '@/lib/config/db';
 import Blog from '@/lib/models/Blog';
 
 export async function generateMetadata({ params }) {
+  const { slug } = await params;
   try {
     await ConnectDB();
-    const blog = await Blog.findOne({ slug: params.slug, published: true }).lean();
+    const blog = await Blog.findOne({ slug, published: true }).lean();
     if (!blog) return { title: 'Blog Not Found' };
 
     const seoTitle = blog.metaTitle || blog.title;
@@ -47,10 +48,11 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function DynamicBlogPage({ params }) {
+  const { slug } = await params;
   let blog;
   try {
     await ConnectDB();
-    blog = await Blog.findOne({ slug: params.slug, published: true }).lean();
+    blog = await Blog.findOne({ slug, published: true }).lean();
   } catch {
     notFound();
   }
